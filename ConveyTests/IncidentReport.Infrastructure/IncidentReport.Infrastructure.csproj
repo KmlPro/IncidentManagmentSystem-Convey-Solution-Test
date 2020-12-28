@@ -4,4 +4,10 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Convey" Version="0.4.409" />
+      <PackageReference Include="Convey.Docs.Swagger" Version="0.4.409" />
+      <PackageReference Include="Convey.WebApi.Swagger" Version="0.4.409" />
+    </ItemGroup>
+
 </Project>

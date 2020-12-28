@@ -14,7 +14,14 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/IncidentReport.Application.csproj": {
+            "projectPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/IncidentReport.Application.csproj"
+          },
+          "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/IncidentReport.Infrastructure.csproj": {
+            "projectPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/IncidentReport.Infrastructure.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -25,6 +32,24 @@
   },
   "frameworks": {
     "netcoreapp3.1": {
+      "dependencies": {
+        "Convey": {
+          "target": "Package",
+          "version": "[0.4.409, )"
+        },
+        "Convey.Logging": {
+          "target": "Package",
+          "version": "[0.4.409, )"
+        },
+        "Convey.WebApi": {
+          "target": "Package",
+          "version": "[0.4.409, )"
+        },
+        "Convey.WebApi.CQRS": {
+          "target": "Package",
+          "version": "[0.4.409, )"
+        }
+      },
       "imports": [
         "net461",
         "net462",

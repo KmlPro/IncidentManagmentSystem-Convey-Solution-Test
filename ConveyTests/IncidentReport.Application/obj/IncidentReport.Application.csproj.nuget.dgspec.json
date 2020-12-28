@@ -35,6 +35,28 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Convey": {
+              "target": "Package",
+              "version": "[0.4.409, )"
+            },
+            "Convey.CQRS.Commands": {
+              "target": "Package",
+              "version": "[0.4.409, )"
+            },
+            "Convey.CQRS.Events": {
+              "target": "Package",
+              "version": "[0.4.409, )"
+            },
+            "Convey.CQRS.Queries": {
+              "target": "Package",
+              "version": "[0.4.409, )"
+            },
+            "Convey.MessageBrokers": {
+              "target": "Package",
+              "version": "[0.4.409, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -46,6 +68,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

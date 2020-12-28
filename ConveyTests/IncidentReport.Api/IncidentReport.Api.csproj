@@ -5,4 +5,16 @@
         <RootNamespace>IncidentReport</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Convey" Version="0.4.409" />
+      <PackageReference Include="Convey.Logging" Version="0.4.409" />
+      <PackageReference Include="Convey.WebApi" Version="0.4.409" />
+      <PackageReference Include="Convey.WebApi.CQRS" Version="0.4.409" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IncidentReport.Application\IncidentReport.Application.csproj" />
+      <ProjectReference Include="..\IncidentReport.Infrastructure\IncidentReport.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>

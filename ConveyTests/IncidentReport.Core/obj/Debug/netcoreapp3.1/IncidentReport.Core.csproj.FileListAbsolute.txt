@@ -1,0 +1,9 @@
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/bin/Debug/netcoreapp3.1/IncidentReport.Core.deps.json
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/bin/Debug/netcoreapp3.1/IncidentReport.Core.dll
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/bin/Debug/netcoreapp3.1/IncidentReport.Core.pdb
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/obj/Debug/netcoreapp3.1/IncidentReport.Core.csprojAssemblyReference.cache
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/obj/Debug/netcoreapp3.1/IncidentReport.Core.AssemblyInfoInputs.cache
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/obj/Debug/netcoreapp3.1/IncidentReport.Core.AssemblyInfo.cs
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/obj/Debug/netcoreapp3.1/IncidentReport.Core.csproj.CoreCompileInputs.cache
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/obj/Debug/netcoreapp3.1/IncidentReport.Core.dll
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/obj/Debug/netcoreapp3.1/IncidentReport.Core.pdb
