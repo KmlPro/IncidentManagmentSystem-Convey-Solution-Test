@@ -14,7 +14,11 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/IncidentReport.Core.csproj": {
+            "projectPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/IncidentReport.Core.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -31,6 +35,10 @@
           "version": "[0.4.409, )"
         },
         "Convey.Docs.Swagger": {
+          "target": "Package",
+          "version": "[0.4.409, )"
+        },
+        "Convey.Persistence.MongoDB": {
           "target": "Package",
           "version": "[0.4.409, )"
         },

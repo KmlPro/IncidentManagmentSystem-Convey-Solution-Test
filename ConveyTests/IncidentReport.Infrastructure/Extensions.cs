@@ -1,4 +1,5 @@
 ﻿using Convey;
+using Convey.Persistence.MongoDB;
 using Microsoft.AspNetCore.Builder;
 
 namespace IncidentReport.Infrastructure
@@ -7,6 +8,8 @@ namespace IncidentReport.Infrastructure
     {
         public static IConveyBuilder AddInfrastructure(this IConveyBuilder builder)
         {
+            builder.AddMongo();
+            
             return builder;
         }
 

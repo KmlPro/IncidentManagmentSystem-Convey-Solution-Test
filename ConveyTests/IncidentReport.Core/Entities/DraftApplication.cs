@@ -10,8 +10,9 @@ namespace IncidentReport.Core.Entities
     {
         public string Content { get; }
         public string Title { get; }
+        public DateTime DateCreated { get; }
         
-        public DraftApplication(Guid id, string content,string title,
+        public DraftApplication(Guid id, string content,string title,DateTime dateCreated,
             int version = 0)
         {
             ValidateContent(content);
@@ -20,6 +21,7 @@ namespace IncidentReport.Core.Entities
             Content = content;
             Title = title;
             Version = version;
+            DateCreated = dateCreated;
         }
 
         private static void ValidateContent(string content)
@@ -30,9 +32,9 @@ namespace IncidentReport.Core.Entities
             }
         }
 
-        public static DraftApplication Create(Guid id, string content,string title)
+        public static DraftApplication Create(Guid id, string content,string title, DateTime dateCreated)
         {
-            var draftApplication = new DraftApplication(id, content, title);
+            var draftApplication = new DraftApplication(id, content, title, dateCreated);
             draftApplication.AddEvent(new DraftApplicationCreated(draftApplication));
             return draftApplication;
         }

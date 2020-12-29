@@ -7,7 +7,12 @@
     <ItemGroup>
       <PackageReference Include="Convey" Version="0.4.409" />
       <PackageReference Include="Convey.Docs.Swagger" Version="0.4.409" />
+      <PackageReference Include="Convey.Persistence.MongoDB" Version="0.4.409" />
       <PackageReference Include="Convey.WebApi.Swagger" Version="0.4.409" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IncidentReport.Core\IncidentReport.Core.csproj" />
     </ItemGroup>
 
 </Project>

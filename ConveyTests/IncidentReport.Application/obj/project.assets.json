@@ -1359,6 +1359,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "IncidentReport.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/IncidentReport.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IncidentReport.Core.dll": {}
+        }
       }
     }
   },
@@ -4869,6 +4879,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "IncidentReport.Core/1.0.0": {
+      "type": "project",
+      "path": "../IncidentReport.Core/IncidentReport.Core.csproj",
+      "msbuildProject": "../IncidentReport.Core/IncidentReport.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4877,7 +4892,8 @@
       "Convey.CQRS.Commands >= 0.4.409",
       "Convey.CQRS.Events >= 0.4.409",
       "Convey.CQRS.Queries >= 0.4.409",
-      "Convey.MessageBrokers >= 0.4.409"
+      "Convey.MessageBrokers >= 0.4.409",
+      "IncidentReport.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4903,7 +4919,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/IncidentReport.Core.csproj": {
+              "projectPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/IncidentReport.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

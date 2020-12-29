@@ -3,7 +3,7 @@ using IncidentReport.Core.Entities;
 
 namespace IncidentReport.Core.Repositories
 {
-    public interface IResourcesRepository
+    public interface IDraftApplicationRepository
     {
         Task<DraftApplication> GetAsync(AggregateId id);
         Task<bool> ExistsAsync(AggregateId id);
