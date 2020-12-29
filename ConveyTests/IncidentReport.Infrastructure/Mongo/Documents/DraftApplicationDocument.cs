@@ -1,8 +1,9 @@
 using System;
+using Convey.Types;
 
 namespace IncidentReport.Infrastructure.Mongo.Documents
 {
-    internal sealed class DraftApplicationDocument
+    internal sealed class DraftApplicationDocument : IIdentifiable<Guid>
     {
         public Guid Id { get; set; }
         
