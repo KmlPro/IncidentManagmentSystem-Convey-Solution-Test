@@ -1,16 +1,15 @@
 using System;
 using IncidentReport.Application.DTO;
-using IncidentReport.Core.Entities;
 
-namespace IncidentReport.Infrastructure.Mongo.Documents
+namespace IncidentReport.Infrastructure.Mongo.Documents.DraftApplication
 {
     internal static class Extensions
     {
-        public static DraftApplication AsEntity(this DraftApplicationDocument document) =>
-            new DraftApplication(document.Id, document.Content, document.Title, document.DateCreated.AsDateTime(), document.ReadyToPost,
+        public static Core.Entities.DraftApplication AsEntity(this DraftApplicationDocument document) =>
+            new Core.Entities.DraftApplication(document.Id, document.Content, document.Title, document.DateCreated.AsDateTime(), document.ReadyToPost,
                 document.Version);
 
-        public static DraftApplicationDocument AsDocument(this DraftApplication draftApplication) =>
+        public static DraftApplicationDocument AsDocument(this Core.Entities.DraftApplication draftApplication) =>
             new DraftApplicationDocument()
             {
                 Id = draftApplication.Id,

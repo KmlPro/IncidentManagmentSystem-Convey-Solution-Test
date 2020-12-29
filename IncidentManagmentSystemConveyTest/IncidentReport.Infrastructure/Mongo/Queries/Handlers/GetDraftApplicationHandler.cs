@@ -3,6 +3,7 @@ using Convey.CQRS.Queries;
 using IncidentReport.Application.DTO;
 using IncidentReport.Application.Queries;
 using IncidentReport.Infrastructure.Mongo.Documents;
+using IncidentReport.Infrastructure.Mongo.Documents.DraftApplication;
 using MongoDB.Driver;
 
 namespace IncidentReport.Infrastructure.Mongo.Queries.Handlers
