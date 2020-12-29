@@ -1,8 +1,11 @@
 ﻿using System;
 using Convey;
 using Convey.CQRS.Queries;
+using Convey.MessageBrokers.CQRS;
+using Convey.MessageBrokers.RabbitMQ;
 using Convey.Persistence.MongoDB;
 using Convey.WebApi;
+using IncidentReport.Application.Events.External;
 using IncidentReport.Core.Repositories;
 using IncidentReport.Infrastructure.Exceptions;
 using IncidentReport.Infrastructure.Mongo.Documents;
@@ -22,13 +25,16 @@ namespace IncidentReport.Infrastructure
                 .AddQueryHandlers()
                 .AddInMemoryQueryDispatcher()
                 .AddErrorHandler<ExceptionToResponseMapper>()
-                .AddMongoRepository<DraftApplicationDocument, Guid>("draft-applications");
+                .AddMongoRepository<DraftApplicationDocument, Guid>("draft-applications")
+                .AddRabbitMq();
             return builder;
         }
 
         public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)
         {
             app.UseErrorHandler();
+            app.UseRabbitMq()
+                .SubscribeEvent<SignedUp>();
             return app;
         }
     }
