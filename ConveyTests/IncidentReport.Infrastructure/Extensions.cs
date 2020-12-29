@@ -1,5 +1,6 @@
 ﻿using System;
 using Convey;
+using Convey.CQRS.Queries;
 using Convey.Persistence.MongoDB;
 using Convey.WebApi;
 using IncidentReport.Core.Repositories;
@@ -18,6 +19,8 @@ namespace IncidentReport.Infrastructure
             builder.Services.AddTransient<IDraftApplicationRepository, DraftApplicationMongoRepository>();
             
             builder.AddMongo()
+                .AddQueryHandlers()
+                .AddInMemoryQueryDispatcher()
                 .AddErrorHandler<ExceptionToResponseMapper>()
                 .AddMongoRepository<DraftApplicationDocument, Guid>("draft-applications");
             return builder;

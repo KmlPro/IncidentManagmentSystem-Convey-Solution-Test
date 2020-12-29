@@ -1,4 +1,5 @@
 using System;
+using IncidentReport.Application.DTO;
 using IncidentReport.Core.Entities;
 
 namespace IncidentReport.Infrastructure.Mongo.Documents
@@ -19,6 +20,15 @@ namespace IncidentReport.Infrastructure.Mongo.Documents
                 DateCreated = draftApplication.DateCreated.AsDaysSinceEpoch()
             };
 
+        public static DraftApplicationDto AsDto(this DraftApplicationDocument document) =>
+            new DraftApplicationDto()
+            {
+                Id = document.Id,
+                Version = document.Version,
+                Content = document.Content,
+                Title = document.Title,
+                DateCreated = document.DateCreated.AsDateTime()
+            };
 
         internal static int AsDaysSinceEpoch(this DateTime dateTime) => (dateTime - new DateTime()).Days;
 
