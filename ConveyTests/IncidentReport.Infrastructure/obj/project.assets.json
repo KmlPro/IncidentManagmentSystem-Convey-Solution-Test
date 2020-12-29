@@ -18,6 +18,30 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Convey.CQRS.Commands/0.4.409": {
+        "type": "package",
+        "dependencies": {
+          "Convey": "0.4.409"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Convey.CQRS.Commands.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Convey.CQRS.Commands.dll": {}
+        }
+      },
+      "Convey.CQRS.Events/0.4.409": {
+        "type": "package",
+        "dependencies": {
+          "Convey": "0.4.409"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Convey.CQRS.Events.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Convey.CQRS.Events.dll": {}
+        }
+      },
       "Convey.CQRS.Queries/0.4.409": {
         "type": "package",
         "dependencies": {
@@ -43,6 +67,19 @@
         },
         "runtime": {
           "lib/netcoreapp3.1/Convey.Docs.Swagger.dll": {}
+        }
+      },
+      "Convey.MessageBrokers/0.4.409": {
+        "type": "package",
+        "dependencies": {
+          "Convey": "0.4.409",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Convey.MessageBrokers.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Convey.MessageBrokers.dll": {}
         }
       },
       "Convey.Persistence.MongoDB/0.4.409": {
@@ -330,7 +367,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/11.0.1": {
+      "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -1666,6 +1703,27 @@
           "lib/netstandard2.0/Utf8Json.dll": {}
         }
       },
+      "IncidentReport.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Convey": "0.4.409",
+          "Convey.CQRS.Commands": "0.4.409",
+          "Convey.CQRS.Events": "0.4.409",
+          "Convey.CQRS.Queries": "0.4.409",
+          "Convey.MessageBrokers": "0.4.409",
+          "IncidentReport.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IncidentReport.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IncidentReport.Application.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "IncidentReport.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1691,6 +1749,30 @@
         "lib/netcoreapp3.1/Convey.dll"
       ]
     },
+    "Convey.CQRS.Commands/0.4.409": {
+      "sha512": "+qWnLdWB/KrRh6vF7VAeYmqkeAq/uAwUvcC9Pq8QkpVDtT3l8iNwJXqZj9e+uiKORZwLwo4UIINwtqCoUjm9VQ==",
+      "type": "package",
+      "path": "convey.cqrs.commands/0.4.409",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "convey.cqrs.commands.0.4.409.nupkg.sha512",
+        "convey.cqrs.commands.nuspec",
+        "lib/netcoreapp3.1/Convey.CQRS.Commands.dll"
+      ]
+    },
+    "Convey.CQRS.Events/0.4.409": {
+      "sha512": "MLKBWbyhWoBbPlM4kFxFmVvA9HvFcTUrCjQFckwqRTHTja3bU0V91STt9kBxcl1lNl9kMW4oln+D6LJRKhSlNQ==",
+      "type": "package",
+      "path": "convey.cqrs.events/0.4.409",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "convey.cqrs.events.0.4.409.nupkg.sha512",
+        "convey.cqrs.events.nuspec",
+        "lib/netcoreapp3.1/Convey.CQRS.Events.dll"
+      ]
+    },
     "Convey.CQRS.Queries/0.4.409": {
       "sha512": "r0wqZjVejQEQClzURljjE/RlPRjy466U7q1y9yovD7G6HGNlW6d9NcQbrI7NgjRMa5vTlcYZWHqzFsq34E5dsQ==",
       "type": "package",
@@ -1713,6 +1795,18 @@
         "convey.docs.swagger.0.4.409.nupkg.sha512",
         "convey.docs.swagger.nuspec",
         "lib/netcoreapp3.1/Convey.Docs.Swagger.dll"
+      ]
+    },
+    "Convey.MessageBrokers/0.4.409": {
+      "sha512": "sPxaSlSfaVyCyXlJg8ad1TwEKe7JVP3ECaUPZvfYZ8A1KAFLDdtJUYMbIgc1ZBgRRzt/t+i+vottWJm5ckGNjQ==",
+      "type": "package",
+      "path": "convey.messagebrokers/0.4.409",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "convey.messagebrokers.0.4.409.nupkg.sha512",
+        "convey.messagebrokers.nuspec",
+        "lib/netcoreapp3.1/Convey.MessageBrokers.dll"
       ]
     },
     "Convey.Persistence.MongoDB/0.4.409": {
@@ -2044,10 +2138,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.1": {
-      "sha512": "pNN4l+J6LlpIvHOeNdXlwxv39NPJ2B5klz+Rd2UQZIx30Squ5oND1Yy3wEAUoKn0GPUj6Yxt9lxlYWQqfZcvKg==",
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.1",
+      "path": "newtonsoft.json/12.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2070,7 +2164,7 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.1.nupkg.sha512",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
       ]
     },
@@ -5665,6 +5759,11 @@
         "utf8json.nuspec"
       ]
     },
+    "IncidentReport.Application/1.0.0": {
+      "type": "project",
+      "path": "../IncidentReport.Application/IncidentReport.Application.csproj",
+      "msbuildProject": "../IncidentReport.Application/IncidentReport.Application.csproj"
+    },
     "IncidentReport.Core/1.0.0": {
       "type": "project",
       "path": "../IncidentReport.Core/IncidentReport.Core.csproj",
@@ -5677,6 +5776,7 @@
       "Convey.Docs.Swagger >= 0.4.409",
       "Convey.Persistence.MongoDB >= 0.4.409",
       "Convey.WebApi.Swagger >= 0.4.409",
+      "IncidentReport.Application >= 1.0.0",
       "IncidentReport.Core >= 1.0.0"
     ]
   },
@@ -5704,6 +5804,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/IncidentReport.Application.csproj": {
+              "projectPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/IncidentReport.Application.csproj"
+            },
             "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/IncidentReport.Core.csproj": {
               "projectPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/IncidentReport.Core.csproj"
             }

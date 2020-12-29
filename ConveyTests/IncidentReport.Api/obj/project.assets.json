@@ -2110,6 +2110,7 @@
           "Convey.Docs.Swagger": "0.4.409",
           "Convey.Persistence.MongoDB": "0.4.409",
           "Convey.WebApi.Swagger": "0.4.409",
+          "IncidentReport.Application": "1.0.0",
           "IncidentReport.Core": "1.0.0"
         },
         "compile": {

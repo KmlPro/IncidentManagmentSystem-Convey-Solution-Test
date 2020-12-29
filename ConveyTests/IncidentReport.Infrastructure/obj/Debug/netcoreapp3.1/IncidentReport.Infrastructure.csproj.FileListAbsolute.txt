@@ -7,3 +7,8 @@
 /Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/obj/Debug/netcoreapp3.1/IncidentReport.Infrastructure.csproj.CoreCompileInputs.cache
 /Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/obj/Debug/netcoreapp3.1/IncidentReport.Infrastructure.dll
 /Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/obj/Debug/netcoreapp3.1/IncidentReport.Infrastructure.pdb
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/bin/Debug/netcoreapp3.1/IncidentReport.Core.dll
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/bin/Debug/netcoreapp3.1/IncidentReport.Core.pdb
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/obj/Debug/netcoreapp3.1/IncidentReport.Infrastructure.csproj.CopyComplete
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/bin/Debug/netcoreapp3.1/IncidentReport.Application.dll
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Infrastructure/bin/Debug/netcoreapp3.1/IncidentReport.Application.pdb

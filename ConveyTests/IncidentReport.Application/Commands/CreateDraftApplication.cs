@@ -9,9 +9,9 @@ namespace IncidentReport.Application.Commands
         public string Content { get; }
         public string Title { get; }
 
-        public CreateDraftApplication(Guid draftApplicationId, string content, string title)
+        public CreateDraftApplication(Guid id, string content, string title)
         {
-            Id = draftApplicationId == Guid.Empty ? Guid.NewGuid() : draftApplicationId;
+            Id = id == Guid.Empty ? Guid.NewGuid() : id;
             Content = content;
             Title = title;
         }

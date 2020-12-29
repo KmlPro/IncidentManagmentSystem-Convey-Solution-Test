@@ -7,3 +7,6 @@
 /Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/obj/Debug/netcoreapp3.1/IncidentReport.Application.csproj.CoreCompileInputs.cache
 /Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/obj/Debug/netcoreapp3.1/IncidentReport.Application.dll
 /Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/obj/Debug/netcoreapp3.1/IncidentReport.Application.pdb
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/bin/Debug/netcoreapp3.1/IncidentReport.Core.dll
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/bin/Debug/netcoreapp3.1/IncidentReport.Core.pdb
+/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Application/obj/Debug/netcoreapp3.1/IncidentReport.Application.csproj.CopyComplete

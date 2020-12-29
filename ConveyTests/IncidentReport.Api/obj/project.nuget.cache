@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qWlsALjUHZLFYNI1RuVa0KSIsjfa2carlABpvroucie6HxeVUzhtgEF3WJgWxMgBWfvg3QulEK8pS1gFCNRSFA==",
+  "dgSpecHash": "qZb1V/qZVJeFHGCwvwfM+CJliDnsN7jzAfSixhQEHoDrsVCDM1VyUoJODiIPcpgU73njbuj0ym+Jc0Jy6d4vdQ==",
   "success": true,
   "projectFilePath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Api/IncidentReport.Api.csproj",
   "expectedPackageFiles": [

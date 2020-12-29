@@ -1,6 +1,13 @@
-﻿using Convey;
+﻿using System;
+using Convey;
 using Convey.Persistence.MongoDB;
+using Convey.WebApi;
+using IncidentReport.Core.Repositories;
+using IncidentReport.Infrastructure.Exceptions;
+using IncidentReport.Infrastructure.Mongo.Documents;
+using IncidentReport.Infrastructure.Mongo.Repositories;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace IncidentReport.Infrastructure
 {
@@ -8,13 +15,17 @@ namespace IncidentReport.Infrastructure
     {
         public static IConveyBuilder AddInfrastructure(this IConveyBuilder builder)
         {
-            builder.AddMongo();
+            builder.Services.AddTransient<IDraftApplicationRepository, DraftApplicationMongoRepository>();
             
+            builder.AddMongo()
+                .AddErrorHandler<ExceptionToResponseMapper>()
+                .AddMongoRepository<DraftApplicationDocument, Guid>("draft-applications");
             return builder;
         }
 
         public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)
         {
+            app.UseErrorHandler();
             return app;
         }
     }
