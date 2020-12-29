@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/ConveyTests/ConveyTests.csproj",
-      "projectName": "ConveyTests",
-      "projectPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/ConveyTests/ConveyTests.csproj",
+      "projectUniqueName": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/IncidentReport.Core.csproj",
+      "projectName": "IncidentReport.Core",
+      "projectPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/IncidentReport.Core.csproj",
       "packagesPath": "/Users/kamilbytner/.nuget/packages/",
-      "outputPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/ConveyTests/obj/",
+      "outputPath": "/Users/kamilbytner/Repozytoria/ConveyTest/just-for-test-convey/ConveyTests/IncidentReport.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/kamilbytner/.nuget/NuGet/NuGet.Config"
@@ -52,9 +52,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
