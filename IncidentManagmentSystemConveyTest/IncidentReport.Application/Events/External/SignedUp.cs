@@ -4,7 +4,7 @@ using Convey.MessageBrokers;
 
 namespace IncidentReport.Application.Events.External
 {
-    [Message("identity")]
+ //   [Message("identity")]
     public class SignedUp : IEvent
     {
         public Guid UserId { get; }

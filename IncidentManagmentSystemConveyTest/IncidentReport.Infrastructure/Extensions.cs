@@ -8,11 +8,14 @@ using Convey.WebApi;
 using Convey.WebApi.CQRS;
 using Convey.WebApi.Swagger;
 using IncidentReport.Application;
+using IncidentReport.Application.Events;
+using IncidentReport.Application.Services;
 using IncidentReport.Core.Repositories;
 using IncidentReport.Infrastructure.Exceptions;
 using IncidentReport.Infrastructure.Mongo.Documents.DraftApplication;
 using IncidentReport.Infrastructure.Mongo.Documents.PostedApplication;
 using IncidentReport.Infrastructure.Mongo.Repositories;
+using IncidentReport.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,6 +27,14 @@ namespace IncidentReport.Infrastructure
         {
             builder.Services.AddTransient<IDraftApplicationRepository, DraftApplicationMongoRepository>();
             builder.Services.AddTransient<IPostedApplicationRepository, PostedApplicationMongoRepository>();
+            builder.Services.AddTransient<IMessageBroker, MessageBroker>();
+            builder.Services.AddSingleton<IEventMapper, EventMapper>();
+            builder.Services.AddTransient<IEventProcessor, EventProcessor>();
+
+            builder.Services.Scan(s =>
+                s.FromAssemblies((AppDomain.CurrentDomain.GetAssemblies()))
+                    .AddClasses(c => c.AssignableTo((typeof(IDomainEventHandler<>)))).AsImplementedInterfaces()
+                    .WithTransientLifetime());
 
             builder.AddMongo()
                 .AddQueryHandlers()
@@ -33,8 +44,8 @@ namespace IncidentReport.Infrastructure
                 .AddMongoRepository<DraftApplicationDocument, Guid>("draft-applications")
                 .AddMongoRepository<PostedApplicationDocument, Guid>("posted-applications")
                 .AddSwaggerDocs()
-                .AddWebApiSwaggerDocs();
-            //   .AddRabbitMq();
+                .AddWebApiSwaggerDocs()
+                .AddRabbitMq();
             return builder;
         }
 
@@ -42,7 +53,8 @@ namespace IncidentReport.Infrastructure
         {
             app.UseErrorHandler()
                 .UseConvey()
-                .UsePublicContracts<ContractAttribute>();
+                .UsePublicContracts<ContractAttribute>()
+                .UseRabbitMq();
               //  .UseSwaggerDocs(); <-- this doesnt work, dont know why.
             
             // app.UseRabbitMq()
