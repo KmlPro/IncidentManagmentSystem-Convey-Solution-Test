@@ -14,5 +14,7 @@ namespace IncidentReport.Infrastructure.Mongo.Documents
         public int Version { get; set; }
         
         public int DateCreated { get; set; }
+        
+        public bool ReadyToPost { get; set; }
     }
 }

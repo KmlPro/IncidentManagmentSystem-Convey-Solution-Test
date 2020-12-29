@@ -7,7 +7,7 @@ namespace IncidentReport.Infrastructure.Mongo.Documents
     internal static class Extensions
     {
         public static DraftApplication AsEntity(this DraftApplicationDocument document) =>
-            new DraftApplication(document.Id, document.Content, document.Title, document.DateCreated.AsDateTime(),
+            new DraftApplication(document.Id, document.Content, document.Title, document.DateCreated.AsDateTime(), document.ReadyToPost,
                 document.Version);
 
         public static DraftApplicationDocument AsDocument(this DraftApplication draftApplication) =>
@@ -17,7 +17,8 @@ namespace IncidentReport.Infrastructure.Mongo.Documents
                 Version = draftApplication.Version,
                 Content = draftApplication.Content,
                 Title = draftApplication.Title,
-                DateCreated = draftApplication.DateCreated.AsDaysSinceEpoch()
+                DateCreated = draftApplication.DateCreated.AsDaysSinceEpoch(),
+                ReadyToPost = draftApplication.ReadyToPost
             };
 
         public static DraftApplicationDto AsDto(this DraftApplicationDocument document) =>

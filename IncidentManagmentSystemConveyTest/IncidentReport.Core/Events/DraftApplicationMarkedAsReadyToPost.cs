@@ -2,10 +2,11 @@ using IncidentReport.Core.Entities;
 
 namespace IncidentReport.Core.Events
 {
-    public class DraftApplicationCreated : IDomainEvent
+    public class DraftApplicationMarkedAsReadyToPost : IDomainEvent
     {
         public DraftApplication DraftApplication { get; }
-        public DraftApplicationCreated(DraftApplication draftApplication)
+
+        public DraftApplicationMarkedAsReadyToPost(DraftApplication draftApplication)
             => DraftApplication = draftApplication;
     }
 }

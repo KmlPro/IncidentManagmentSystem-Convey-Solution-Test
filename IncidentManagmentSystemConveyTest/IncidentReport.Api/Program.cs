@@ -41,7 +41,8 @@ namespace IncidentReport
                         .Get<GetDraftApplications, IEnumerable<DraftApplicationDto>>("draft-application") 
                         .Get<GetDraftApplication, DraftApplicationDto>("draft-application/{draftApplicationId}") 
                         .Post<CreateDraftApplication>("draft-application", 
-                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"draft-application/{cmd.Id}")))
-                );
+                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"draft-application/{cmd.Id}"))
+                        .Post<MarkAsReadyToPost>("draft-application/{draftApplicationId}/mark-as-ready-for-post", afterDispatch: (cmd, ctx) => ctx.Response.NoContent())
+                    ));
     }
 }

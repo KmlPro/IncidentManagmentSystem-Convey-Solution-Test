@@ -9,8 +9,9 @@ namespace IncidentReport.Core.Entities
         public string Content { get; }
         public string Title { get; }
         public DateTime DateCreated { get; }
+        public bool ReadyToPost { get; private set; }
         
-        public DraftApplication(Guid id, string content,string title,DateTime dateCreated,
+        public DraftApplication(Guid id, string content,string title,DateTime dateCreated,bool readyToPost,
             int version = 0)
         {
             ValidateContent(content);
@@ -20,6 +21,7 @@ namespace IncidentReport.Core.Entities
             Title = title;
             Version = version;
             DateCreated = dateCreated;
+            ReadyToPost = readyToPost;
         }
 
         private static void ValidateContent(string content)
@@ -32,9 +34,22 @@ namespace IncidentReport.Core.Entities
 
         public static DraftApplication Create(Guid id, string content,string title, DateTime dateCreated)
         {
-            var draftApplication = new DraftApplication(id, content, title, dateCreated);
+            var draftApplication = new DraftApplication(id, content, title, dateCreated, false);
             draftApplication.AddEvent(new DraftApplicationCreated(draftApplication));
             return draftApplication;
+        }
+
+        public void MarkAsReadyToPost()
+        {
+            if (DraftApplicationIsAlreadyMarkedAsReadyToPost(ReadyToPost))
+            {
+                throw new DraftApplicationAlreadyMarkedAsReadyToPostException(Id);
+            }
+
+            ReadyToPost = true;
+            AddEvent(new DraftApplicationMarkedAsReadyToPost(this));
+
+            bool DraftApplicationIsAlreadyMarkedAsReadyToPost(in bool readyToPost) => readyToPost == true;
         }
     }
 }
