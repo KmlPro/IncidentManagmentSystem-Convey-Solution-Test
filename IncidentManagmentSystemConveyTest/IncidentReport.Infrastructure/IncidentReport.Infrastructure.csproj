@@ -8,8 +8,10 @@
       <PackageReference Include="Convey" Version="0.4.411" />
       <PackageReference Include="Convey.Docs.Swagger" Version="0.4.411" />
       <PackageReference Include="Convey.MessageBrokers.CQRS" Version="0.4.411" />
+      <PackageReference Include="Convey.MessageBrokers.Outbox" Version="0.4.411" />
+      <PackageReference Include="Convey.MessageBrokers.Outbox.Mongo" Version="0.4.411" />
       <PackageReference Include="Convey.MessageBrokers.RabbitMQ" Version="0.4.411" />
-      <PackageReference Include="Convey.Persistence.MongoDB" Version="0.4.409" />
+      <PackageReference Include="Convey.Persistence.MongoDB" Version="0.4.411" />
       <PackageReference Include="Convey.WebApi.CQRS" Version="0.4.411" />
       <PackageReference Include="Convey.WebApi.Swagger" Version="0.4.411" />
     </ItemGroup>

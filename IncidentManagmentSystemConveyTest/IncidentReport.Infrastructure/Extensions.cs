@@ -1,7 +1,11 @@
 ﻿using System;
 using Convey;
+using Convey.CQRS.Commands;
+using Convey.CQRS.Events;
 using Convey.CQRS.Queries;
 using Convey.Docs.Swagger;
+using Convey.MessageBrokers.Outbox;
+using Convey.MessageBrokers.Outbox.Mongo;
 using Convey.MessageBrokers.RabbitMQ;
 using Convey.Persistence.MongoDB;
 using Convey.WebApi;
@@ -11,6 +15,7 @@ using IncidentReport.Application;
 using IncidentReport.Application.Events;
 using IncidentReport.Application.Services;
 using IncidentReport.Core.Repositories;
+using IncidentReport.Infrastructure.Decorators;
 using IncidentReport.Infrastructure.Exceptions;
 using IncidentReport.Infrastructure.Mongo.Documents.DraftApplication;
 using IncidentReport.Infrastructure.Mongo.Documents.PostedApplication;
@@ -30,6 +35,8 @@ namespace IncidentReport.Infrastructure
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
             builder.Services.AddSingleton<IEventMapper, EventMapper>();
             builder.Services.AddTransient<IEventProcessor, EventProcessor>();
+            builder.Services.TryDecorate(typeof(ICommandHandler<>), typeof(OutboxCommandHandlerDecorator<>));
+            builder.Services.TryDecorate(typeof(IEventHandler<>), typeof(OutboxEventHandlerDecorator<>));
 
             builder.Services.Scan(s =>
                 s.FromAssemblies((AppDomain.CurrentDomain.GetAssemblies()))
@@ -45,7 +52,9 @@ namespace IncidentReport.Infrastructure
                 .AddMongoRepository<PostedApplicationDocument, Guid>("posted-applications")
                 .AddSwaggerDocs()
                 .AddWebApiSwaggerDocs()
-                .AddRabbitMq();
+                .AddRabbitMq()
+                .AddMessageOutbox(o => o.AddMongo());
+            
             return builder;
         }
 

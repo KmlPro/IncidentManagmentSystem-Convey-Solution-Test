@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Convey.CQRS.Queries;
 using IncidentReport.Application.DTO;
 using IncidentReport.Application.Queries;
-using IncidentReport.Infrastructure.Mongo.Documents;
 using IncidentReport.Infrastructure.Mongo.Documents.DraftApplication;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;

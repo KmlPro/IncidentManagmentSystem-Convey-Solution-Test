@@ -3,8 +3,6 @@ using System.Threading.Tasks;
 using Convey.Persistence.MongoDB;
 using IncidentReport.Core.Entities;
 using IncidentReport.Core.Repositories;
-using IncidentReport.Infrastructure.Mongo.Documents;
-using IncidentReport.Infrastructure.Mongo.Documents.DraftApplication;
 using IncidentReport.Infrastructure.Mongo.Documents.PostedApplication;
 using MongoDB.Driver;
 
