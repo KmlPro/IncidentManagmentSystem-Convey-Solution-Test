@@ -1,6 +1,5 @@
 using System;
 using Convey.CQRS.Events;
-using Convey.MessageBrokers;
 
 namespace IncidentReport.Application.Events.External
 {

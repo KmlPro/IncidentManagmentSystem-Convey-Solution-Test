@@ -4,6 +4,7 @@ using Convey.CQRS.Commands;
 using Convey.CQRS.Events;
 using Convey.CQRS.Queries;
 using Convey.Docs.Swagger;
+using Convey.MessageBrokers.CQRS;
 using Convey.MessageBrokers.Outbox;
 using Convey.MessageBrokers.Outbox.Mongo;
 using Convey.MessageBrokers.RabbitMQ;
@@ -12,6 +13,7 @@ using Convey.WebApi;
 using Convey.WebApi.CQRS;
 using Convey.WebApi.Swagger;
 using IncidentReport.Application;
+using IncidentReport.Application.Commands;
 using IncidentReport.Application.Events;
 using IncidentReport.Application.Services;
 using IncidentReport.Core.Repositories;
@@ -63,7 +65,9 @@ namespace IncidentReport.Infrastructure
             app.UseErrorHandler()
                 .UseConvey()
                 .UsePublicContracts<ContractAttribute>()
-                .UseRabbitMq();
+                .UseRabbitMq()
+                .SubscribeCommand<PostApplication>();
+           
               //  .UseSwaggerDocs(); <-- this doesnt work, dont know why.
             
             // app.UseRabbitMq()

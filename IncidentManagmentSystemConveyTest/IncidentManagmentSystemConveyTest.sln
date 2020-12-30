@@ -10,7 +10,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncidentReport.Core", "Inci
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IncidentReport", "IncidentReport", "{1CA04B8B-741E-43C0-8B62-10B90D368C72}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{EAC98C3C-3AF0-4D7B-BC04-9CF086A9143D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{F670BE13-45B4-4485-A9EB-CA155AB72E81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InitialIncidentVerification", "InitialIncidentVerification", "{74761B4E-189D-47EB-835C-0E1043F57ABE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

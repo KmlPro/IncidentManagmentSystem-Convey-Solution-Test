@@ -11,8 +11,8 @@ namespace IncidentReport.Infrastructure.Exceptions
         public object Map(Exception exception, object message)
             => exception switch
             {
-                ContentIsEmptyException ex => new PostedApplicationRejected(Guid.Empty, ex.Message, ex.Code),
-                PostedApplicationAlreadyExistsException ex => new PostedApplicationRejected(ex.PostedApplicationId, ex.Message, ex.Code),
+                ContentIsEmptyException ex => new PostApplicationRejected(Guid.Empty, ex.Message, ex.Code),
+                PostedApplicationAlreadyExistsException ex => new PostApplicationRejected(ex.PostedApplicationId, ex.Message, ex.Code),
                 _ => null
             };
     }

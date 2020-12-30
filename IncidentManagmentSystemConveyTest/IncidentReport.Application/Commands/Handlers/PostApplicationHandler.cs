@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using Convey.CQRS.Commands;
-using IncidentReport.Application.Events;
 using IncidentReport.Application.Exceptions;
 using IncidentReport.Application.Services;
 using IncidentReport.Core.Entities;
