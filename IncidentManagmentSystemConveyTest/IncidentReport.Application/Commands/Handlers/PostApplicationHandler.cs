@@ -20,12 +20,12 @@ namespace IncidentReport.Application.Commands.Handlers
        
         public async Task HandleAsync(PostApplication command)
         {
-            if (await _repository.ExistsAsync(command.Id))
+            if (await _repository.ExistsAsync(command.PostedApplicationId))
             {
-                throw new PostedApplicationAlreadyExistsException(command.Id);
+                throw new PostedApplicationAlreadyExistsException(command.PostedApplicationId);
             }
             
-            var postedApplication = PostedApplication.Create(command.Id, command.Content, command.Title, DateTime.Now);
+            var postedApplication = PostedApplication.Create(command.PostedApplicationId, command.Content, command.Title, DateTime.Now);
             await _repository.AddAsync(postedApplication);
             await _eventProcessor.ProcessAsync(postedApplication.Events);
         }

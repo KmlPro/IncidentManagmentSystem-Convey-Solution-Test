@@ -44,7 +44,7 @@ namespace IncidentReport
                             afterDispatch: (cmd, ctx) => ctx.Response.Created($"draft-application/{cmd.Id}"))
                         .Post<MarkAsReadyToPost>("draft-application/{draftApplicationId}/mark-as-ready-for-post", afterDispatch: (cmd, ctx) => ctx.Response.NoContent())
                         .Post<PostApplication>("posted-application", 
-                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"posted-application/{cmd.Id}"))
+                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"posted-application/{cmd.PostedApplicationId}"))
                     ));
     }
 }

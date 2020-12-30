@@ -12,7 +12,7 @@ namespace IncidentReport.Infrastructure.Services
         public IEvent Map(IDomainEvent @event)
             => @event switch
             {    
-                PostedApplicationCreated e => new PostedApplicationAdded(e.PostedApplication.Id),
+                PostedApplicationCreated e => new PostedApplicationAdded(e.PostedApplication.Id, e.PostedApplication.Content, e.PostedApplication.Title),
                 _ => null
             };
 
