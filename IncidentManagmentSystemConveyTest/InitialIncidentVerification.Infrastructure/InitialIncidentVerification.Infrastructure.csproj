@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Convey" Version="0.4.411" />
+      <PackageReference Include="Convey.CQRS.Commands" Version="0.4.411" />
+      <PackageReference Include="Convey.CQRS.Events" Version="0.4.411" />
+      <PackageReference Include="Convey.CQRS.Queries" Version="0.4.411" />
+      <PackageReference Include="Convey.MessageBrokers" Version="0.4.411" />
+      <PackageReference Include="Convey.MessageBrokers.CQRS" Version="0.4.411" />
+      <PackageReference Include="Convey.MessageBrokers.Outbox" Version="0.4.411" />
+      <PackageReference Include="Convey.MessageBrokers.Outbox.Mongo" Version="0.4.411" />
+      <PackageReference Include="Convey.MessageBrokers.RabbitMQ" Version="0.4.411" />
+      <PackageReference Include="Convey.Persistence.MongoDB" Version="0.4.411" />
+      <PackageReference Include="Convey.WebApi" Version="0.4.411" />
+      <PackageReference Include="Convey.WebApi.CQRS" Version="0.4.411" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\InitialIncidentVerification.Core\InitialIncidentVerification.Core.csproj" />
+    </ItemGroup>
+
+</Project>

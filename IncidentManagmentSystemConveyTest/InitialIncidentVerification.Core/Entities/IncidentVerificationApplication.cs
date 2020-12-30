@@ -9,12 +9,13 @@ namespace InitialIncidentVerification.Entities
         public string Title { get; }
         public DateTime DateReceived { get; }
 
-        public IncidentVerificationApplication(Guid id, string content, string title, DateTime dateReceived)
+        public IncidentVerificationApplication(Guid id, string content, string title, DateTime dateReceived, int version = 0)
         {
             Id = id;
             Content = content;
             Title = title;
             DateReceived = dateReceived;
+            Version = version;
         }
         
         public static IncidentVerificationApplication Create(Guid id, string content,string title, DateTime dateCreated)

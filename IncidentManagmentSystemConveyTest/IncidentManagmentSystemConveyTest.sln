@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialIncidentVerification
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialIncidentVerification.Application", "InitialIncidentVerification.Application\InitialIncidentVerification.Application.csproj", "{B9CC3361-28F5-4BC7-9B14-8A11D66EA2F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialIncidentVerification.Infrastructure", "InitialIncidentVerification.Infrastructure\InitialIncidentVerification.Infrastructure.csproj", "{AB816ABF-6F76-4456-8CBE-1C35E73A2A32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{B9CC3361-28F5-4BC7-9B14-8A11D66EA2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9CC3361-28F5-4BC7-9B14-8A11D66EA2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9CC3361-28F5-4BC7-9B14-8A11D66EA2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB816ABF-6F76-4456-8CBE-1C35E73A2A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB816ABF-6F76-4456-8CBE-1C35E73A2A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB816ABF-6F76-4456-8CBE-1C35E73A2A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB816ABF-6F76-4456-8CBE-1C35E73A2A32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C4CECE0C-AC4C-4D6E-A874-83DA6964C14A} = {1CA04B8B-741E-43C0-8B62-10B90D368C72}
@@ -56,5 +62,6 @@ Global
 		{633F7BA4-37D7-4A68-9D41-BE78DFAD908C} = {1CA04B8B-741E-43C0-8B62-10B90D368C72}
 		{432E0483-5545-4C17-929B-920C288E16D4} = {74761B4E-189D-47EB-835C-0E1043F57ABE}
 		{B9CC3361-28F5-4BC7-9B14-8A11D66EA2F3} = {74761B4E-189D-47EB-835C-0E1043F57ABE}
+		{AB816ABF-6F76-4456-8CBE-1C35E73A2A32} = {74761B4E-189D-47EB-835C-0E1043F57ABE}
 	EndGlobalSection
 EndGlobal
