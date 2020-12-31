@@ -6,6 +6,7 @@ Link to Pacco project (my solution mostly base on this solution). https://github
 
 # Documentation 
 
-##How to start ? 
+## How to run this solution ? 
 
-At first, run infrastructure.yaml from compose folder, for run MongoDb and RabbitMq Docker images. 
+1) Execute script <b> docker-compose -f infrastructure.yml up -d </b> from compose folder, for run MongoDb and RabbitMq Docker images. 
+2) Run 2 *.API project from Visual Studio or Raider IDE.
