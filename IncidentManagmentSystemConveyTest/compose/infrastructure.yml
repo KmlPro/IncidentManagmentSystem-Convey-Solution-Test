@@ -1,0 +1,40 @@
+version: "3.7"
+
+services: 
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: unless-stopped
+    # environment:
+    #   - MONGO_INITDB_ROOT_USERNAME=root
+    #   - MONGO_INITDB_ROOT_PASSWORD=secret
+    networks:
+      - ims
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
+
+  rabbitmq:
+    build: ./rabbitmq
+    container_name: rabbitmq
+    restart: unless-stopped
+    networks:
+      - ims
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 15692:15692
+    # volumes: 
+    #   - rabbitmq:/var/lib/rabbitmq  
+
+networks:
+  ims:
+    name: ims-network
+
+volumes:
+  mongo:
+    driver: local
+  # rabbitmq:
+  #   driver: local
+  
