@@ -27,6 +27,16 @@ modules:
         use: downstream
         downstream: incident-report-service/draft-application
         
+      - upstream: /draft-application
+        method: POST
+        use: downstream
+        downstream: incident-report-service/draft-application
+
+      - upstream: /posted-application
+        method: POST
+        use: downstream
+        downstream: incident-report-service/draft-application
+       
     services:
       incident-report-service:
         localUrl: localhost:5001
