@@ -20,6 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\InitialIncidentVerification.Application\InitialIncidentVerification.Application.csproj" />
       <ProjectReference Include="..\InitialIncidentVerification.Core\InitialIncidentVerification.Core.csproj" />
     </ItemGroup>
 
