@@ -11,6 +11,7 @@ using Convey.Persistence.MongoDB;
 using Convey.WebApi;
 using InitialIncidentVerification.Application.Events.External;
 using InitialIncidentVerification.Infrastructure.Decorators;
+using InitialIncidentVerification.Infrastructure.Logging;
 using InitialIncidentVerification.Infrastructure.Mongo.Documents;
 using InitialIncidentVerification.Infrastructure.Mongo.Repositories;
 using InitialIncidentVerification.Repositories;
@@ -33,6 +34,7 @@ namespace InitialIncidentVerification.Infrastructure
                 .AddInMemoryQueryDispatcher()
                 .AddMongoRepository<IncidentVerificationApplicationDocument, Guid>("incident-verification-application")
                 .AddRabbitMq()
+                .AddHandlersLogging()
                 .AddMessageOutbox(o => o.AddMongo());
 
             return builder;
