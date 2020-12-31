@@ -6,14 +6,14 @@ namespace IncidentReport.Application.Events
     [Contract]
     public class PostedApplicationAdded : IEvent
     {
-        public PostedApplicationAdded(Guid id, string content, string title)
+        public PostedApplicationAdded(Guid postedApplicationId, string content, string title)
         {
-            Id = id;
+            PostedApplicationId = postedApplicationId;
             Content = content;
             Title = title;
         }
         
-        public Guid Id { get; }
+        public Guid PostedApplicationId { get; }
         public string Content { get; }
         public string Title { get; }
     }
