@@ -3,8 +3,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:35178",
-      "sslPort": 44376
+      "applicationUrl": "http://localhost:50330",
+      "sslPort": 44388
     }
   },
   "profiles": {
@@ -15,10 +15,10 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "InitialIncidentVerification.Api": {
+    "ApiGateway": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5002",
+      "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

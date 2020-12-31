@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Convey" Version="0.4.411" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.10" />
+      <PackageReference Include="NetEscapades.Configuration.Yaml" Version="2.1.0" />
+      <PackageReference Include="Ntrada" Version="0.4.4" />
+      <PackageReference Include="Ntrada.Extensions.RabbitMq" Version="0.4.1" />
+    </ItemGroup>
+
+</Project>

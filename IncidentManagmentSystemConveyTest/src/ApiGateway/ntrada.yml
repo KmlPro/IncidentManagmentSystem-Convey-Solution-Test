@@ -1,0 +1,33 @@
+http:
+  retries: 2
+  interval: 2.0
+  exponential: true
+
+useForwardedHeaders: true
+passQueryString: true
+forwardRequestHeaders: true
+forwardResponseHeaders: true
+generateRequestId: true
+generateTraceId: true
+useLocalUrl: true
+
+modules:
+  home:
+    routes:
+      - upstream: /
+        method: GET
+        use: return_value
+        returnValue: Welcome to IMS API!
+        
+  incident-report:
+    path: incident-report
+    routes:
+      - upstream: /draft-application
+        method: GET
+        use: downstream
+        downstream: incident-report-service/draft-application
+        
+    services:
+      incident-report-service:
+        localUrl: localhost:5001
+        url: incident-report-service
