@@ -64,9 +64,9 @@ namespace IncidentReport.Infrastructure
         {
             app.UseErrorHandler()
                 .UseConvey()
-                .UsePublicContracts<ContractAttribute>()
+                .UsePublicContracts<ContractAttribute>() //<-- for /_contracts url
                 .UseRabbitMq()
-                .SubscribeCommand<PostApplication>();
+                .SubscribeCommand<PostApplication>(); //<-- async handling commands
            
               //  .UseSwaggerDocs(); <-- this doesnt work, dont know why.
             

@@ -3,6 +3,7 @@ using Convey.CQRS.Commands;
 
 namespace IncidentReport.Application.Commands
 {
+    [Contract]
     public class PostApplication : ICommand
     {
         public PostApplication(Guid id, string content, string title)
