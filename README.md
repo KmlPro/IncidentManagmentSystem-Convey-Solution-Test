@@ -20,11 +20,21 @@ You can create a draft and mark it as ready to send.
 
 Created applications can be downloaded using the unique identifier or can be found in the created list
 
-
 ### Posted applications 
 
 To send an application for initial verification, you must create the posted application in the Incident Report module. Incident Report will publish the "PostedApplicationAdded" event and module Initial Incident Verification will create an application for initial verification based on recevied event.
 
+## Architecture
+
+![](./IncidentManagmentSystemConveyTest/docs/architecture.png)
+
+<b>Api Gateway</b> - Entrance point for system. For the consumer, it does not matter how many microservices the entire system consists of.
+
+<b>Incident Report/Initial Incident Verification </b> - Microservies for handling use cases.
+
+<b> MongoDB </b> - NoSQL Database.
+
+<b> RabbitMQ </b> - Message broker for handle asynchronus communication between microservices
 
 ## How to test Use Cases?
 
