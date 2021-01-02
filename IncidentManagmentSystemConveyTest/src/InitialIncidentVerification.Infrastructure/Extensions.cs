@@ -34,7 +34,7 @@ namespace InitialIncidentVerification.Infrastructure
                 .AddQueryHandlers()
                 .AddInMemoryQueryDispatcher()
                 .AddErrorHandler<ExceptionToResponseMapper>()
-                .AddMongoRepository<IncidentVerificationApplicationDocument, Guid>("incident-verification-application")
+                .AddMongoRepository<IncidentVerificationApplicationDocument, Guid>("incident-verification-applications")
                 .AddRabbitMq()
                 .AddHandlersLogging()
                 .AddMessageOutbox(o => o.AddMongo());

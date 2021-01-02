@@ -21,7 +21,7 @@ namespace InitialIncidentVerification.Infrastructure.Mongo.Queries
         public async Task<IEnumerable<IncidentVerificationApplicationDto>> HandleAsync(GetIncidentVerificationApplications query)
         {
             var collection =
-                _database.GetCollection<IncidentVerificationApplicationDocument>("incident-verification-application");
+                _database.GetCollection<IncidentVerificationApplicationDocument>("incident-verification-applications");
             
             var allDocuments = await collection.Find(_ => true).ToListAsync();
             return allDocuments.Select(d => d.AsDto());

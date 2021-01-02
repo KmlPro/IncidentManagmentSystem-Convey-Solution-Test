@@ -18,12 +18,12 @@ namespace IncidentReport.Application.Commands.Handlers
         
         public async Task HandleAsync(CreateDraftApplication command)
         {
-            if (await _draftApplicationRepository.ExistsAsync(command.Id))
+            if (await _draftApplicationRepository.ExistsAsync(command.DraftApplicationId))
             {
-                throw new DraftApplicationAlreadyExistsException(command.Id);
+                throw new DraftApplicationAlreadyExistsException(command.DraftApplicationId);
             }
 
-            var draftApplication = DraftApplication.Create(command.Id, command.Content, command.Title, DateTime.Now);
+            var draftApplication = DraftApplication.Create(command.DraftApplicationId, command.Content, command.Title, DateTime.Now);
             await _draftApplicationRepository.AddAsync(draftApplication);
         }
     }

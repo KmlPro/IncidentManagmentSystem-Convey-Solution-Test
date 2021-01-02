@@ -27,17 +27,55 @@ modules:
         use: downstream
         downstream: incident-report-service/draft-application
         
+      - upstream: /draft-application/{draftApplicationId}
+        method: GET
+        use: downstream
+        downstream: incident-report-service/draft-application/{draftApplicationId}
+        
       - upstream: /draft-application
         method: POST
         use: downstream
         downstream: incident-report-service/draft-application
+        
+      - upstream: /draft-application/{draftApplicationId}/mark-as-ready-for-post
+        method: POST
+        use: downstream
+        downstream: incident-report-service/draft-application/{draftApplicationId}/mark-as-ready-for-post
+       
+      - upstream: /posted-application
+        method: GET
+        use: downstream
+        downstream: incident-report-service/posted-application
 
+      - upstream: /posted-application/{postedApplicationId}
+        method: GET
+        use: downstream
+        downstream: incident-report-service/posted-application/{postedApplicationId}      
+        
       - upstream: /posted-application
         method: POST
         use: downstream
-        downstream: incident-report-service/draft-application
+        downstream: incident-report-service/posted-application       
        
     services:
       incident-report-service:
         localUrl: localhost:5001
         url: incident-report-service
+        
+  initial-incident-verification:
+    path: initial-incident-verification
+    routes:
+      - upstream: /incident-verification-application
+        method: GET
+        use: downstream
+        downstream: initial-incident-service/incident-verification-application
+
+      - upstream: /incident-verification-application/{initialIncidentVerificationId}
+        method: GET
+        use: downstream
+        downstream: initial-incident-service/incident-verification-application/{initialIncidentVerificationId}
+        
+    services:
+      initial-incident-service:
+        localUrl: localhost:5002
+        url: initial-incident-service

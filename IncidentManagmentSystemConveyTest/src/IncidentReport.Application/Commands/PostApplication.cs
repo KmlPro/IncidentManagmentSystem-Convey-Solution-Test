@@ -6,9 +6,9 @@ namespace IncidentReport.Application.Commands
     [Contract]
     public class PostApplication : ICommand
     {
-        public PostApplication(Guid id, string content, string title)
+        public PostApplication(Guid postedApplicationId, string content, string title)
         {
-            PostedApplicationId = id == Guid.Empty ? Guid.NewGuid() : id;
+            PostedApplicationId = postedApplicationId == Guid.Empty ? Guid.NewGuid() : postedApplicationId;
             Content = content;
             Title = title;
         } 

@@ -5,11 +5,11 @@ namespace IncidentReport.Application.Commands
 {
     public class MarkAsReadyToPost : ICommand
     {
-        public Guid Id { get; }
+        public Guid DraftApplicationId { get; }
 
-        public MarkAsReadyToPost(Guid id)
+        public MarkAsReadyToPost(Guid draftApplicationId)
         {
-            Id = id;
+            DraftApplicationId = draftApplicationId;
         }
     }
 }

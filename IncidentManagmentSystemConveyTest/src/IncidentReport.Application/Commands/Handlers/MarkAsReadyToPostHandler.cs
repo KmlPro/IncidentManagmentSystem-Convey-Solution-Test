@@ -16,11 +16,11 @@ namespace IncidentReport.Application.Commands.Handlers
 
         public async Task HandleAsync(MarkAsReadyToPost command)
         {
-            var draftApplication = await _draftApplicationRepository.GetAsync(command.Id);
+            var draftApplication = await _draftApplicationRepository.GetAsync(command.DraftApplicationId);
             
             if (draftApplication is null)
             {
-                throw new DraftApplicationNotFoundException(command.Id);
+                throw new DraftApplicationNotFoundException(command.DraftApplicationId);
             }
 
             draftApplication.MarkAsReadyToPost();
