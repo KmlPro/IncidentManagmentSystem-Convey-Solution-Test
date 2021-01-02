@@ -14,13 +14,13 @@ Link to Pacco project (my solution mostly base on this solution). https://github
 
 ## Use cases
 
-### Draft application
+<b> Draft application </b>
 
 You can create a draft and mark it as ready to send.
 
 Created applications can be downloaded using the unique identifier or can be found in the created list
 
-### Posted applications 
+<b> Posted applications </b>
 
 To send an application for initial verification, you must create the posted application in the Incident Report module. Incident Report will publish the "PostedApplicationAdded" event and module Initial Incident Verification will create an application for initial verification based on recevied event.
 
@@ -36,7 +36,25 @@ To send an application for initial verification, you must create the posted appl
 
 <b> RabbitMQ </b> - Message broker for handle asynchronus communication between microservices
 
-## How to test Use Cases?
+### Microservice architecture 
+
+![](./IncidentManagmentSystemConveyTest/docs/microservice-architecture.png)
+
+<b> Core </b> - Independet of framework layer, that encapsulate business rules. 
+
+Contains: Aggreagates/Entities, Domain Events, Domain Exceptions, Value Objects and Repositories
+
+<b> Application </b> - Implementation of application use cases.
+
+Contains: Commadn Handlers, DTO's for Query Results, Queries, Events Handlers, Application Exceptions
+
+<b> Infrastructure  </b> - necessary infrastructure configuration to handle use cases
+
+Contains: Persistance configuration, Integration with RabbitMq, Map Exceptions to Api Response, Map Exceptions to Rejected Messages
+
+<b> Api  </b> - Executable .NET Core Api, entrance point to use cases.
+
+## Postman tests 
 
 In the folder <b> tests/postman </b> there are test collections for Postman. Each collection includes tests for resources exposed by ApiGateway.
 
