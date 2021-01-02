@@ -1,9 +1,12 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Convey;
 using Convey.Types;
 using Convey.WebApi;
 using Convey.WebApi.CQRS;
 using InitialIncidentVerification.Application;
+using InitialIncidentVerification.Application.DTO;
+using InitialIncidentVerification.Application.Queries;
 using InitialIncidentVerification.Infrastructure;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
@@ -34,6 +37,8 @@ namespace InitialIncidentVerification.Api
                     .UseDispatcherEndpoints(endpoints => endpoints
                         .Get("", ctx => ctx.Response.WriteAsync(
                             ctx.RequestServices.GetService<AppOptions>().Name))
+                        .Get<GetIncidentVerificationApplications, IEnumerable<IncidentVerificationApplicationDto>>("incident-verification-application") 
+                        .Get<GetIncidentVerificationApplication, IncidentVerificationApplicationDto>("incident-verification-application/{incidentVerificationApplicationId}") 
                     ));
     }
 }

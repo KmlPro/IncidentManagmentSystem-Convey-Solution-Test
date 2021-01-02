@@ -1,4 +1,5 @@
 using System;
+using InitialIncidentVerification.Application.DTO;
 using InitialIncidentVerification.Entities;
 
 namespace InitialIncidentVerification.Infrastructure.Mongo.Documents
@@ -17,6 +18,16 @@ namespace InitialIncidentVerification.Infrastructure.Mongo.Documents
                 Content = application.Content,
                 Title = application.Title,
                 DateReceived = application.DateReceived.AsDaysSinceEpoch(),
+            };
+        
+        public static IncidentVerificationApplicationDto AsDto(this IncidentVerificationApplicationDocument document) =>
+            new IncidentVerificationApplicationDto()
+            {
+                Id = document.Id,
+                Version = document.Version,
+                Content = document.Content,
+                Title = document.Title,
+                DateReceived = document.DateReceived.AsDateTime()
             };
 
         internal static int AsDaysSinceEpoch(this DateTime dateTime) => (dateTime - new DateTime()).Days;
