@@ -28,4 +28,7 @@ To send an application for initial verification, you must create the posted appl
 
 ## How to test Use Cases?
 
-In the folder <b> tests/postman </b> there are test collections for Postman. Each collection includes tests for those posted by ApiGateway.
+In the folder <b> tests/postman </b> there are test collections for Postman. Each collection includes tests for resources exposed by ApiGateway.
+
+![](./IncidentManagmentSystemConveyTest/docs/postman.png)
+
