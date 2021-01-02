@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "e183e263-1506-4bd3-a4de-cd19c5473876",
+		"name": "Initial Incident Verification Api - Initial Incident Verification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Initial Incident Verification By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Initial Incident Verification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

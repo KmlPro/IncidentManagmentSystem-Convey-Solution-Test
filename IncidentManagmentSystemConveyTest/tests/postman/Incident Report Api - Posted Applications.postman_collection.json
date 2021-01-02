@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "777e8d0b-1d91-46d7-bb1e-86c347a74b1b",
+		"name": "Incident Report Api - Posted Applications",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Posted Application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  PostedApplicationId: '632d282d-98d3-4aee-9efb-fe3ad40e6454',\n  Content: \"Sample Posted Content\",\n  Title: \"Title of Posted application\",\n}"
+				},
+				"url": {
+					"raw": "{{gateway_url}}/incident-report/posted-application/",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"incident-report",
+						"posted-application",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posted application By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Posted Applications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

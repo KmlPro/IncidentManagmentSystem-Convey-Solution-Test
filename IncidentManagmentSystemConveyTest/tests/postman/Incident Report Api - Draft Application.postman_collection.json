@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "95811846-d024-47ea-9e74-ab45688112fb",
+		"name": "Incident Report Api - Draft Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Draft Application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  DraftApplicationId: '632d282d-98d3-4aee-9efb-fe3ad40e6410',\n  Content: \"Sample Content\",\n  Title: \"Title of draft application\",\n}"
+				},
+				"url": {
+					"raw": "{{gateway_url}}/incident-report/draft-application/",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"incident-report",
+						"draft-application",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Draft Application By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Draft Applications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dratfs By Content",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark Draft as ready for post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  Id: '632d282d-98d3-4aee-9efb-fe3ad40e6410'\n}"
+				},
+				"url": {
+					"raw": "{{gateway_url}}/incident-report/draft-application/632d282d-98d3-4aee-9efb-fe3ad40e6469/mark-as-ready-for-post",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"incident-report",
+						"draft-application",
+						"632d282d-98d3-4aee-9efb-fe3ad40e6469",
+						"mark-as-ready-for-post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
