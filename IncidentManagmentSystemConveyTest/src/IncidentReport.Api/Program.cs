@@ -40,6 +40,8 @@ namespace IncidentReport
                             ctx.RequestServices.GetService<AppOptions>().Name))
                         .Get<GetDraftApplications, IEnumerable<DraftApplicationDto>>("draft-application") 
                         .Get<GetDraftApplication, DraftApplicationDto>("draft-application/{draftApplicationId}") 
+                        .Get<GetPostedApplication, PostedApplicationDto>("posted-application/{postedApplicationId}")
+                        .Get<GetPostedApplications, IEnumerable<PostedApplicationDto>>("posted-application")
                         .Post<CreateDraftApplication>("draft-application", 
                             afterDispatch: (cmd, ctx) => ctx.Response.Created($"draft-application/{cmd.Id}"))
                         .Post<MarkAsReadyToPost>("draft-application/{draftApplicationId}/mark-as-ready-for-post", afterDispatch: (cmd, ctx) => ctx.Response.NoContent())
