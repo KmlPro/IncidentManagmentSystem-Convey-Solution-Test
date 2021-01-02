@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  PostedApplicationId: '632d282d-98d3-4aee-9efb-fe3ad40e6454',\n  Content: \"Sample Posted Content\",\n  Title: \"Title of Posted application\",\n}"
+					"raw": "{\n  PostedApplicationId: '632d282d-98d3-4aee-9efb-fe3ad40e6412',\n  Content: \"Sample Posted Content\",\n  Title: \"Title of Posted application\",\n}"
 				},
 				"url": {
 					"raw": "{{gateway_url}}/incident-report/posted-application/",
@@ -34,7 +34,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{gateway_url}}/incident-report/posted-application/632d282d-98d3-4aee-9efb-fe3ad40e6499",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"incident-report",
+						"posted-application",
+						"632d282d-98d3-4aee-9efb-fe3ad40e6499"
+					]
 				}
 			},
 			"response": []
@@ -45,7 +53,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{gateway_url}}/incident-report/posted-application/",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"incident-report",
+						"posted-application",
+						""
+					]
 				}
 			},
 			"response": []

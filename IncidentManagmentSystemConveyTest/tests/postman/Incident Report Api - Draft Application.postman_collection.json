@@ -34,7 +34,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{gateway_url}}/incident-report/draft-application/632d282d-98d3-4aee-9efb-fe3ad40e6469/",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"incident-report",
+						"draft-application",
+						"632d282d-98d3-4aee-9efb-fe3ad40e6469",
+						""
+					]
 				}
 			},
 			"response": []
@@ -45,7 +54,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{gateway_url}}/incident-report/draft-application",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"incident-report",
+						"draft-application"
+					]
 				}
 			},
 			"response": []
@@ -56,7 +72,20 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{gateway_url}}/incident-report/draft-application?content=Sample Content",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"incident-report",
+						"draft-application"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "Sample Content"
+						}
+					]
 				}
 			},
 			"response": []

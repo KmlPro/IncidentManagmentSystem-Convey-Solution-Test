@@ -11,7 +11,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{gateway_url}}/initial-incident-verification/incident-verification-application/632d282d-98d3-4aee-9efb-fe3ad40e6412",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"initial-incident-verification",
+						"incident-verification-application",
+						"632d282d-98d3-4aee-9efb-fe3ad40e6412"
+					]
 				}
 			},
 			"response": []
@@ -22,7 +30,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{gateway_url}}/initial-incident-verification/incident-verification-application",
+					"host": [
+						"{{gateway_url}}"
+					],
+					"path": [
+						"initial-incident-verification",
+						"incident-verification-application"
+					]
 				}
 			},
 			"response": []
